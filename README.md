@@ -11,9 +11,13 @@
 
 The work is licensed under Laravel.
 
+## Description
+
 This repository contains information about ArtistIO,code that enables an artist to upload their work free of charge and reap maximum profit from the sale of their artworks. It also enables artists to engage with one another and collaborate on art together.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
+It aims at providing upcoming artists with a chance to showcase their artworks in the ever competitive art market without having to suffer hefty commissions or having to pay to display their art pieces.
+
+<!--- [Simple, fast routing engine](https://laravel.com/docs/routing).
 - [Powerful dependency injection container](https://laravel.com/docs/container).
 - Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
 - Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
@@ -21,19 +25,47 @@ This repository contains information about ArtistIO,code that enables an artist 
 - [Robust background job processing](https://laravel.com/docs/queues).
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Laravel is accessible, powerful, and provides tools required for large, robust applications.-->
 
-## Learning Laravel
+## Dependencies
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+In order to run ArtistIO effeciently, one has to download and have the following frameworks:
+
+- Composer
+- Laravel
+- Xampp
+- Github
+
+<!--Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
 You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.-->
 
-## Laravel Sponsors
+## Installation Steps
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+First, one has to download composer. In this case, we shall do it manually using the following commands that you will run in command prompt:
+```
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'YOUR_HASH_HERE') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php --install-dir=bin --filename=composer
+composer --version
+php -r "unlink('composer-setup.php');"
+```
+You will then have to clone this repository to your local repository.Run this in command prompt:
+```
+git clone https://github.com/gabyjr19/ArtistIO.git
+```
+Finally you shall navigate to your cloned project and run it.
+```
+cd [path to your cloned project]
+php artisan serve
+```
+In order to import the database for the project, ensure you have installed Xampp. You can visit the **[Apache Friends Website](https://www.apachefriends.org/download.html)** and follow the download prompts and instructions.
+
+
+
+<!--We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).-->
 
 ### Premium Partners
 
