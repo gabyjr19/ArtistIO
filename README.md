@@ -35,6 +35,7 @@ In order to run ArtistIO effeciently, one has to download and have the following
 - Laravel
 - Xampp
 - Github
+- Filament
 
 <!--Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
@@ -61,15 +62,30 @@ Finally you shall navigate to your cloned project and run it.
 cd [path to your cloned project]
 php artisan serve
 ```
-In order to import the database for the project, ensure you have installed Xampp. You can visit the **[Apache Friends Website](https://www.apachefriends.org/download.html)** and follow the download prompts and instructions.
+In order to import the database for the project, ensure you have installed Xampp. You can visit the **[Apache Friends Website](https://www.apachefriends.org/download.html)** and follow the download prompts and instructions.You then import the ArtistIO database.
 
-
+In order to access the admin dashboard, one has to download Filament. This is after creating their Laravel project as seen above. Use the following commands
+```
+cd path/to/your/laravel/project
+composer require filament/filament
+php artisan filament:install
+php artisan migrate
+http://localhost:8000/admin
+```
 
 <!--We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).-->
 
-### Premium Partners
+### Usage Instructions
 
-- **[Vehikl](https://vehikl.com/)**
+In order to run the website/project, one uses the following command:
+```
+php artisan serve
+```
+To be able to access the admin dashboard, one has to key in the folowing credentials:
+-Email:
+-Password:
+
+<!--- **[Vehikl](https://vehikl.com/)**
 - **[Tighten Co.](https://tighten.co)**
 - **[WebReinvent](https://webreinvent.com/)**
 - **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
@@ -81,19 +97,31 @@ In order to import the database for the project, ensure you have installed Xampp
 - **[Redberry](https://redberry.international/laravel/)**
 - **[Active Logic](https://activelogic.com)**
 - **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+- **[OP.GG](https://op.gg)**-->
 
-## Contributing
+## Project Structure
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Since ArtistIO is using the Laravel framework, the main folders of the project are:
 
-## Code of Conduct
+- Views/Layouts
+- Public/Resources
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+The main files in the project are:
 
-## Security Vulnerabilities
+- account.blade.php
+- artworks.blade.php
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<!--Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).-->
+
+## Project Status
+
+The project is currently ongoing.
+
+<!--In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).-->
+
+<!--## Security Vulnerabilities
+
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.-->
 
 ## License
 
