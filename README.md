@@ -9,7 +9,7 @@
 
 ## ArtistIO: An Art Website that Aims at Providing a Free Platform for Artists to Upload their Work
 
-The work is licensed under Laravel.
+<!--The work is licensed under Laravel.-->
 
 ## Description
 
@@ -126,3 +126,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+Filament License:[License](https://github.com/filamentphp/filament/blob/1.x/LICENSE.md)
+
+
