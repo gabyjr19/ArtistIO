@@ -102,6 +102,63 @@ To be able to access the admin dashboard, one has to key in the folowing credent
 ## Project Structure
 
 Since ArtistIO is using the Laravel framework, the main folders of the project are:
+```
+|   .env
+|   .env.example
+|   .gitattributes
+|   .gitignore
+|   artisan
+|   composer.json
+|   composer.lock
+|   package-lock.json
+|   package.json
+|   phpunit.xml
+|   README.md
+|   vite.config.js
+|   
++---app
+|   +---Console
+|   +---Exceptions
+|   +---Http
+|   |   +---Controllers
+|   |   |       Controller.php
+|   |   +---Middleware
+|   +---Models
+|   +---Providers
++---bootstrap
++---config
++---database
+|   +---factories
+|   +---migrations
+|   +---seeders
++---node_modules
++---public
+|   +---css
+|   +---js
++---resources
+|   +---css
+|   +---js
+|   +---views
++---routes
+|       api.php
+|       channels.php
+|       console.php
+|       web.php
++---storage
+|   +---app
+|   +---framework
+|   |   +---cache
+|   |   +---sessions
+|   |   +---views
+|   +---logs
++---tests
+|       TestCase.php
++---vendor
+```
+
+
+
+<!--Since ArtistIO is using the Laravel framework, the main folders of the project are:
 
 - Views/Layouts
 - Public/Resources
@@ -109,7 +166,7 @@ Since ArtistIO is using the Laravel framework, the main folders of the project a
 The main files in the project are:
 
 - account.blade.php
-- artworks.blade.php
+- artworks.blade.php-->
 
 <!--Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).-->
 
