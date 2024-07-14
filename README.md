@@ -33,13 +33,16 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ## Dependencies
 
-In order to run ArtistIO effeciently, one has to download and have the following frameworks:
+To run ArtistIO efficiently, you need to download and install the following frameworks:
 
-- Composer
-- Laravel
-- Xampp
-- Github
-- Filament
+- <a href="https://getcomposer.org" target="_blank">Composer</a>
+- <a href="https://laravel.com" target="_blank">Laravel</a>
+- <a href="https://www.apachefriends.org/index.html" target="_blank">XAMPP</a>
+- <a href="https://github.com" target="_blank">GitHub</a>
+- <a href="https://filamentphp.com" target="_blank">Filament</a>
+
+Make sure to follow the installation instructions on their respective websites.
+
 
 <!--Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
