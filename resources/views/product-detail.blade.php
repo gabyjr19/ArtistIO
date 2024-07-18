@@ -98,7 +98,7 @@
 
                         <div class="col-lg-6 col-12">
                             <div class="product-thumb">
-                                <img src="assets/images/product/Art-1.jpg" class="img-fluid product-image" alt="">
+                                <img src="" class="img-fluid product-image" alt="">
                             </div>
                         </div>
 

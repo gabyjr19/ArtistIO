@@ -2,12 +2,12 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Livewire\Actions\Logout;
-/*use App\Http\Controllers\ArtController;
-use App\Http\Controllers\AccountController;
-use App\Http\Controllers\UserController;*/
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArtController;
+use App\Http\Controllers\AccountController;
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\OrderController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -20,6 +20,9 @@ Route::get('/dashboard', function () {
 Route::get('/homepage', function (){
     return view('homepage');
 })->name('homepage');
+
+Route::get('/orders/{order}/edit', [OrderController::class, 'edit'])->name('orders.edit');
+Route::put('/orders/{order}', [OrderController::class, 'update'])->name('orders.update');
 
 Route::get('/story', function(){
     return view('story');
@@ -40,6 +43,10 @@ Route::get('/contact', function(){
 Route::get('/account', function(){
     return view('account');
 });
+
+Route::post('/orders/{order}/pay', [OrderController::class,
+ 'pay'])->name('orders.pay');
+
 
 Route::get('/product-detail', function(){
     return view('product-detail');

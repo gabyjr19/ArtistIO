@@ -2,17 +2,22 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Filament\Models\Contracts\FilamentUser;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Auth\Events\Registered;
+use Filament\Panel;
  
 #event(new Registered($user));
 
-class User extends Authenticatable implements MustVerifyEmail
+class User extends Authenticatable implements FilamentUser
 {
     use HasFactory, Notifiable;
+    public function canAccessPanel(Panel $panel): bool 
+    {
+    return $this->email ==='admin@sahara.com';
+    }
 
     /**
      * The attributes that are mass assignable.
@@ -47,5 +52,6 @@ class User extends Authenticatable implements MustVerifyEmail
             'password' => 'hashed',
         ];
     }
+    
     
 }
