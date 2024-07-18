@@ -33,14 +33,15 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ## Dependencies
 
-In order to run ArtistIO effeciently, one has to download and have the following frameworks:
+In order to run ArtistIO efficiently, you need to download and have the following frameworks:
 
-- Composer
-- Laravel
-- Xampp
-- Github
-- Filament
+- [Composer](https://getcomposer.org/)
+- [Laravel](https://laravel.com/)
+- [XAMPP](https://www.apachefriends.org/index.html)
+- [GitHub](https://github.com/)
+- [Filament](https://filamentphp.com/)
 
+Make sure to install these dependencies before proceeding with the setup and installation of ArtistIO.
 <!--Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
 You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
@@ -49,14 +50,40 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 
 ## Installation Steps
 
-First, one has to download composer. In this case, we shall do it manually using the following commands that you will run in command prompt:
-```
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('sha384', 'composer-setup.php') === 'YOUR_HASH_HERE') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-php composer-setup.php --install-dir=bin --filename=composer
-composer --version
-php -r "unlink('composer-setup.php');"
-```
+First, download Composer manually by running the following commands in your command prompt:
+
+1. **Download the Composer installer:**
+
+    ```sh
+    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+    ```
+
+2. **Verify the installer SHA-384 hash.** Replace `YOUR_HASH_HERE` with the latest hash value from the [Composer website](https://getcomposer.org/download/):
+
+    ```sh
+    php -r "if (hash_file('sha384', 'composer-setup.php') === 'YOUR_HASH_HERE') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+    ```
+
+3. **Install Composer:**
+
+    ```sh
+    php composer-setup.php --install-dir=bin --filename=composer
+    ```
+
+4. **Check the Composer version to verify the installation:**
+
+    ```sh
+    composer --version
+    ```
+
+5. **Remove the installer script:**
+
+    ```sh
+    php -r "unlink('composer-setup.php');"
+    ```
+
+Make sure to replace `YOUR_HASH_HERE` with the actual hash value from the [Composer website](https://getcomposer.org/download/).
+
 You will then have to clone this repository to your local repository.Run this in command prompt:
 ```
 git clone https://github.com/gabyjr19/ArtistIO.git
@@ -68,14 +95,50 @@ php artisan serve
 ```
 In order to import the database for the project, ensure you have installed Xampp. You can visit the **[Apache Friends Website](https://www.apachefriends.org/download.html)** and follow the download prompts and instructions.You then import the ArtistIO database.
 
-In order to access the admin dashboard, one has to download Filament. This is after creating their Laravel project as seen above. Use the following commands
-```
-cd path/to/your/laravel/project
-composer require filament/filament
-php artisan filament:install
-php artisan migrate
-http://localhost:8000/admin
-```
+## Accessing the Admin Dashboard with Filament
+
+In order to access the admin dashboard using Filament, follow these steps after creating your Laravel project:
+
+1. **Navigate to your Laravel project directory:**
+
+    ```sh
+    cd path/to/your/laravel/project
+    ```
+
+2. **Download and install Filament using Composer. Run the following command to install Filament version 3.2 or higher:**
+
+    ```sh
+    composer require filament/filament:"^3.2" -W
+    ```
+
+   The `-W` flag ensures Composer installs the package even if it would cause conflicts.
+
+3. **Install the Widgets package assets:**
+
+    Run the following command to install the Widgets package assets:
+
+    ```sh
+    php artisan filament:install --widgets
+    ```
+
+   This command installs assets specific to the Widgets package in Filament.
+
+4. **Run database migrations to set up Filament tables:**
+
+    ```sh
+    php artisan migrate
+    ```
+
+5. **Access the admin dashboard:**
+
+    After completing the installation and migrations, visit [http://localhost:8000/admin](http://localhost:8000/admin) in your web browser to access the admin dashboard.
+
+    **Default credentials:**
+    - Email: admin@sahara.com
+    - Password: 12345678
+
+For more detailed setup instructions, refer to [Filament's documentation](https://filamentphp.com/).
+
 
 <!--We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).-->
 
@@ -107,34 +170,43 @@ To be able to access the admin dashboard, one has to key in the folowing credent
 
 Since ArtistIO is using the Laravel framework, the main folders of the project are:
 ```
-|   .env
-|   .env.example
-|   .gitattributes
-|   .gitignore
-|   artisan
-|   composer.json
-|   composer.lock
-|   package-lock.json
-|   package.json
-|   phpunit.xml
-|   README.md
-|   vite.config.js
-|   
-+---app
-|   +---Console
-|   +---Exceptions
-|   +---Http
-|   |   +---Controllers
-|   |   |       Controller.php
-|   |   +---Middleware
-|   +---Models
-|   +---Providers
-+---bootstrap
-+---config
-+---database
-|   +---factories
-|   +---migrations
-|   +---seeders
+├── README.md
+├── artisan
+├── artistio
+├── composer.json
+├── composer.lock
+├── output.txt
+├── package-lock.json
+├── package.json
+├── phpunit.xml
+├── postcss.config.js
+├── tailwind.config.js
+├── app
+│   ├── Filament
+│   ├── Http
+│   ├── Livewire
+│   ├── Models
+│   ├── Providers
+│   └── View
+├── bootstrap
+│   ├── app.php
+│   ├── cache
+│   └── providers.php
+├── config
+│   ├── app.php
+│   ├── auth.php
+│   ├── cache.php
+│   ├── database.php
+│   ├── filesystems.php
+│   ├── logging.php
+│   ├── mail.php
+│   ├── queue.php
+│   ├── services.php
+│   └── session.php
+├── database
+│   ├── factories
+│   ├── migrations
+│   └── seeders
 +---node_modules
 +---public
 |   +---css
